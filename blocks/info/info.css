@@ -1,5 +1,6 @@
 @import url(./__weather/info__weather.css);
 @import url(./__city/info__city.css);
+@import url(./__weather/info__weather.css);
 
 .info {
   height: 90%;
