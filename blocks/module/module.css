@@ -1,4 +1,6 @@
 @import url(./__search/module__search.css);
+@import url(./__search-button/module__search-button.css);
+@import url(./__search-input/module__search-input.css);
 
 .module {
   position: absolute;
