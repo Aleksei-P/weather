@@ -1,6 +1,3 @@
-@import url(./__search-button/module__search-button.css);
-@import url(./__search-input/module__search-input.css);
-
 .module__search {
   width: 100%;
   display: flex;
