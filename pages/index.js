@@ -1,4 +1,4 @@
-const key = "038e7afc2a1e68b9343e4467ba7853b1";
+const key = "";
 const weather = {
   fetchWeather: function (city) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
