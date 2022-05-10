@@ -7,7 +7,7 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./pages/index.css" type="text/css"/>
+    <link rel="stylesheet" href="./pages/index.css" type="text/css" />
     <script src="./pages/index.js"></script>
   </head>
   <body class="page">
@@ -18,13 +18,16 @@
       </div>
       <div class="info">
         <h2 class="info__city">City</h2>
-        <p class="info__weather">0</p>
+        <p class="info__weather" id="temp">0</p>
         <div>
-          <p class="info__weather">Temp</p>
-          <p class="info__weather">humidity</p>
-          <p class="info__weather">wind</p>
+          <div class="test">
+            <p class="info__weather" id="description"></p>
+            <img class="info__weather" width="35px" height="35px" id="icon"></img>
+          </div>
+          <p class="info__weather" id="humidity">humidity</p>
+          <p class="info__weather" id="wind">wind</p>
         </div>
-        </div>
+      </div>
     </div>
   </body>
 </html>
