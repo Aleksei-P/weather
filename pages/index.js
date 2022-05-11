@@ -3,7 +3,7 @@ const button = document.querySelector(".module__search-button");
 const inputCity = document.querySelector(".module__search-input");
 const weather = {
   fetchWeather: function (city) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`)
       .then((response) => response.json())
       .then((data) => this.renderWeather(data))
   },
@@ -18,9 +18,9 @@ const weather = {
       document.querySelector(".info__city").innerText = "Weather in " + name;
       document.querySelector("#description").innerText = description.charAt(0).toUpperCase() + description.slice(1);
       document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-      document.querySelector("#temp").innerText = temp + " " + " Fº ";
+      document.querySelector("#temp").innerText = Math.round(temp) + " " + " Cº ";
       document.querySelector("#humidity").innerText = "Humidity: " + humidity + "%";
-      document.querySelector("#wind").innerText = "Wind speed: " + speed  + " miles/hour";
+      document.querySelector("#wind").innerText = "Wind speed: " + speed  + " m/s";
     }
   },
   search: function() {
