@@ -31,11 +31,12 @@ const weather = {
   weather.fetchWeather("New York")
 
   button.addEventListener("click", function(){
+    if(inputCity.value !== "")
     weather.search();
     inputCity.value="";
   })
  inputCity.addEventListener("keyup", function (evt) {
-    if (evt.key == "Enter") {
+    if (evt.key == "Enter" && inputCity.value !== "") {
       weather.search();
       inputCity.value = "";
     }
