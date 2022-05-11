@@ -1,4 +1,9 @@
 .info__weather {
     margin: 0;
-    line-height: 1,5em;
+    line-height: 1em;
+}
+
+.temp{
+    font-weight: bolder;
+    font-size: 1.2em;
 }
