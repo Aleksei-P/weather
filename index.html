@@ -8,23 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./pages/index.css" type="text/css" />
-    <script src="./pages/index.js"></script>
+    <script src="./pages/index.js" type="module"></script>
   </head>
   <body class="page">
     <div class="module">
       <div class="module__search">
-        <input class="module__search-input" type="text" />
+        <input class="module__search-input" placeholder="City" type="text"/>
         <button class="module__search-button"></button>
       </div>
       <div class="info">
-        <h2 class="info__city">City</h2>
-        <p class="info__weather temp" id="temp">0</p>
-         <div class="info__wrapper">
-           <p class="info__weather" id="description"></p>
-           <img class="info__weather" width="35px" height="35px" id="icon"></img>
-          </div>
-          <p class="info__weather" id="humidity">humidity</p>
-          <p class="info__weather" id="wind">wind</p>
+        <h2 class="info__city"> </h2>
+        <div class="info__wrapper">
+        <p class="info__weather temp" id="temp"></p>
+        <img class="info__weather" id="icon"></img>
+      </div>
+          <p class="info__weather" id="description"></p>
+          <p class="info__weather" id="humidity"></p>
+          <p class="info__weather" id="wind"></p>
       </div>
     </div>
   </body>
