@@ -5,6 +5,7 @@
   color: white;
   border: none;
   outline: none;
+  line-height: 1.2em;
 }
 
 ::placeholder {
