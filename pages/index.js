@@ -23,12 +23,26 @@ const weather = {
       document.querySelector("#wind").innerText = "Wind speed: " + speed  + " m/s";
     }
   },
+
+  display: function() {
+      document.querySelector(".info").classList.remove("info_loading");
+
+  },
+
+  hide: function(){
+    document.querySelector(".info").classList.add("info_loading");
+  },
+
   search: function() {
     this.fetchWeather(inputCity.value);
-    console.log(inputCity.value);
+    this.hide();
+   setTimeout(this.display, 1800);
   },
 };
+
+//start app
   weather.fetchWeather("New York")
+  setTimeout(weather.display, 1800);
 
   button.addEventListener("click", function(){
     if(inputCity.value !== "")

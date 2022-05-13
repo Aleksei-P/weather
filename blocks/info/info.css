@@ -2,6 +2,7 @@
 @import url(./__city/info__city.css);
 @import url(./__weather/info__weather.css);
 @import url(./__wrapper/info__wrapper.css);
+@import url(./_loading/info_loading.css);
 
 .info {
   height: 90%;
