@@ -15,13 +15,13 @@ const weather = {
       const { icon, description } = data.weather[0];
       const { temp, humidity } = data.main;
       const { speed } = data.wind;
-      // console.log(name, icon, description, temp, humidity, speed);
       document.querySelector(".info__city").innerText = "Weather in " + name;
       document.querySelector("#description").innerText = description.charAt(0).toUpperCase() + description.slice(1);
       document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
       document.querySelector("#temp").innerText = Math.round(temp) + " " + " Cº ";
       document.querySelector("#humidity").innerText = "Humidity: " + humidity + "%";
       document.querySelector("#wind").innerText = "Wind speed: " + speed + " m/s";
+      document.querySelector(".page").style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";
     }
 
     else {
@@ -36,23 +36,25 @@ const weather = {
 
   display: function() {
       document.querySelector(".info").classList.remove("info_loading");
-
+      document.querySelector("#page").classList.remove("page_loading");
   },
 
   hide: function(){
     document.querySelector(".info").classList.add("info_loading");
+    document.querySelector("#page").classList.add("page_loading");
+
   },
 
   search: function() {
     this.fetchWeather(inputCity.value);
     this.hide();
-   setTimeout(this.display, 1800);
+    setTimeout(this.display, 1600);
   },
 };
 
 //start app
   weather.fetchWeather("New York")
-  setTimeout(weather.display, 1800);
+  setTimeout(weather.display, 1600);
 
   button.addEventListener("click", function(){
     if(inputCity.value !== "")
@@ -65,3 +67,5 @@ const weather = {
       inputCity.value = "";
     }
   });
+
+  // "url('https://source.unsplash.com/1600x900/?" + name + "')";

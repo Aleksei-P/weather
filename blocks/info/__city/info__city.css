@@ -1,3 +1,6 @@
 .info__city {
-    /* margin-bottom: 50px; */
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
