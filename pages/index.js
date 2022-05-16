@@ -1,4 +1,4 @@
-const key = "038e7afc2a1e68b9343e4467ba7853b1";
+const key = "";
 const button = document.querySelector(".module__search-button");
 const inputCity = document.querySelector(".module__search-input");
 const weather = {
